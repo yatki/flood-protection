@@ -1,0 +1,91 @@
+{
+  "name": "flood-protection",
+  "version": "0.1.0",
+  "description": "Flood protection for realtime applications",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:yatki/flood-protection.git"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "keywords": [
+    "env",
+    "environment variables",
+    "parse",
+    "JSON.parse",
+    "read"
+  ],
+  "author": "Mehmet Yatkı",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yatki/flood-protection/issues"
+  },
+  "homepage": "https://github.com/yatki/flood-protection",
+  "scripts": {
+    "preversion": "npm test",
+    "prepublish": "npm run build && npm test",
+    "eslint:fix": "eslint . --fix --color",
+    "eslint:check": "eslint . --color",
+    "build": "better-npm-run build",
+    "compile": "better-npm-run compile",
+    "test": "nyc ava --verbose",
+    "test:coverage": "npm run compile && npm test",
+    "coveralls": "nyc npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
+  },
+  "betterScripts": {
+    "build": {
+      "command": "babel --presets env -d dist/ src/",
+      "env": {
+        "NODE_ENV": "production",
+        "BABEL_ENV": "production"
+      }
+    },
+    "compile": {
+      "command": "babel --presets env -d dist/ src/",
+      "env": {
+        "NODE_ENV": "development",
+        "BABEL_ENV": "development"
+      }
+    },
+    "test": {
+      "command": "babel --presets env -d dist/ src/",
+      "env": {
+        "NODE_ENV": "development",
+        "BABEL_ENV": "development"
+      }
+    }
+  },
+  "pre-push": {
+    "silent": false,
+    "run": [
+      "eslint:check"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/**/*.spec.js"
+    ],
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "better-npm-run": "^0.1.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-ava": "^4.2.2",
+    "eslint-plugin-import": "^2.7.0",
+    "nyc": "^11.2.1",
+    "pre-push": "^0.1.1"
+  }
+}
