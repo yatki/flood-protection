@@ -42,8 +42,8 @@ io.on('connection', (client) => {
   client.emit('connected');
 
   const floodProtection = new FloodProtection({
-    rate: 5, // default: 5, unit: messages, must be >= 1.0
-    per: 8, //default: 8, unit: seconds
+    rate: 5,
+    per: 8,
   });
  
   client.on('message', (text) => {
