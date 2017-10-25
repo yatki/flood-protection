@@ -1,6 +1,6 @@
 {
   "name": "flood-protection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flood protection for realtime applications",
   "main": "dist/index.js",
   "repository": {
@@ -11,11 +11,15 @@
     "dist/index.js"
   ],
   "keywords": [
-    "env",
-    "environment variables",
-    "parse",
-    "JSON.parse",
-    "read"
+    "flood protection",
+    "chat",
+    "socket-io",
+    "realtime",
+    "realtime-chat",
+    "message rate limiting",
+    "anti-spam",
+    "spam-protection",
+    "token-bucket"
   ],
   "author": "Mehmet Yatkı",
   "license": "MIT",

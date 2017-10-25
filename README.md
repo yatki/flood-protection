@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/flood-protection.svg)](https://www.npmjs.com/package/flood-protection)
 [![Build Status](https://travis-ci.org/yatki/flood-protection.svg?branch=master)](https://travis-ci.org/yatki/flood-protection)
 [![Coverage Status](https://coveralls.io/repos/github/yatki/flood-protection/badge.svg?branch=master&)](https://coveralls.io/github/yatki/flood-protection?branch=master)
-[![npm](https://img.shields.io/npm/dt/flood-protection.svg)](https://www.npmjs.com/package/flood-protection)
+
 
 - This library is a direct implementation of [Token Bucket Algorithm](https://en.wikipedia.org/wiki/Token_bucket). 
 - I basically rewrote the python solution which was stated here for my own needs in javascript: [https://stackoverflow.com/a/668327/1417536](https://stackoverflow.com/a/668327/1417536).
