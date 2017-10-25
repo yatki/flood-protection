@@ -41,10 +41,7 @@ import FloodProtection from 'flood-protection';
 io.on('connection', (client) => {
   client.emit('connected');
 
-  const floodProtection = new FloodProtection({
-    rate: 5,
-    per: 8,
-  });
+  const floodProtection = new FloodProtection();
  
   client.on('message', (text) => {
     if (floodProtection.check()) {
