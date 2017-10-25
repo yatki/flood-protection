@@ -1,6 +1,6 @@
 {
   "name": "flood-protection",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Flood protection for realtime applications",
   "main": "dist/index.js",
   "repository": {
