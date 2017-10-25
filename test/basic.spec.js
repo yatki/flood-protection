@@ -7,7 +7,7 @@ test.cb('fails if called every 0.5 seconds', (t) => {
     per: 8,
   };
 
-  const floodProtection = new FloodProtection(options);
+  const floodProtection = new FloodProtection();
   let messageCount = 0;
 
   setInterval(() => {
@@ -75,28 +75,6 @@ test.cb('passes for rate: 10, per: 5 ', (t) => {
     }
   }, 500);
 });
-
-
-test.cb('updateLastCheck method works', (t) => {
-  const floodProtection = new FloodProtection();
-
-  t.truthy(floodProtection.lastCheck);
-
-  const unixtime = Date.now();
-  setTimeout(() => {
-    floodProtection.updateLastCheck(unixtime);
-    t.is(floodProtection.lastCheck, Math.floor(unixtime / 1000));
-    t.pass();
-  }, 1000);
-
-  setTimeout(() => {
-    floodProtection.updateLastCheck();
-    t.is(floodProtection.lastCheck, Math.floor(Date.now() / 1000));
-    t.pass();
-    t.end();
-  }, 2000);
-});
-
 
 test('throws exception if rate < 1.0', (t) => {
   t.throws(() => {

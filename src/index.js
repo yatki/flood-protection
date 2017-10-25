@@ -1,4 +1,4 @@
-const now = (unixtime = Date.now()) => Math.floor(unixtime / 1000);
+const now = () => Math.floor(Date.now() / 1000);
 
 export default class FloodProtection {
   constructor(options = {}) {
@@ -15,10 +15,6 @@ export default class FloodProtection {
 
     this.allowance = this.options.rate;
     this.lastCheck = now();
-  }
-
-  updateLastCheck(unixtime = Date.now()) {
-    this.lastCheck = now(unixtime);
   }
 
   check() {

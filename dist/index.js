@@ -9,8 +9,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var now = function now() {
-  var unixtime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Date.now();
-  return Math.floor(unixtime / 1000);
+  return Math.floor(Date.now() / 1000);
 };
 
 var FloodProtection = function () {
@@ -35,13 +34,6 @@ var FloodProtection = function () {
   }
 
   _createClass(FloodProtection, [{
-    key: 'updateLastCheck',
-    value: function updateLastCheck() {
-      var unixtime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Date.now();
-
-      this.lastCheck = now(unixtime);
-    }
-  }, {
     key: 'check',
     value: function check() {
       var _options = this.options,
