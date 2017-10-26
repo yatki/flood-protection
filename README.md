@@ -64,6 +64,14 @@ io.on('connection', (client) => {
 });
 ```
 
+## Contribution
+
+As always, I'm open to any contribution and would like to hear your feedbacks. 
+
+Just an important reminder: If you are planning to contribute on **any** open source project, 
+before starting development, please **always open an issue** and **make a proposal first**. 
+This will save you from working on features that eventually going to be rejected for some reason.
+
 ## LICENCE
 
 MIT (c) 2017 Mehmet Yatkı
