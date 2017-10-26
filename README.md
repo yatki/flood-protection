@@ -7,8 +7,8 @@
 
 ## Why?
 
-Purpose if this library to have control on receiving data packages. 
-It allows you to **drop** messages if they arrive **too quickly**.
+Purpose if this library is to have control on receiving data packages. 
+It allows you to **drop** data packages or messages if they arrive **too quickly**.
 As an example you may want to use it *to prevent spam messages in chat rooms* or *to limit number of requests to your http/express server*.
 
 ### Notes:
