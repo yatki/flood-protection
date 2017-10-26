@@ -5,9 +5,16 @@
 [![Build Status](https://travis-ci.org/yatki/flood-protection.svg?branch=master)](https://travis-ci.org/yatki/flood-protection)
 [![Coverage Status](https://coveralls.io/repos/github/yatki/flood-protection/badge.svg?branch=master&)](https://coveralls.io/github/yatki/flood-protection?branch=master)
 
+## Why?
 
-- This library is a direct implementation of [Token Bucket Algorithm](https://en.wikipedia.org/wiki/Token_bucket). 
+Purpose if this library to have control on receiving data packages. 
+It allows you to **drop** messages if they arrive **too quickly**.
+As an example you may want to use it *to prevent spam messages in chat rooms* or *to limit number of requests to your http/express server*.
+
+### Notes:
+
 - I basically rewrote the python solution which was stated here for my own needs in javascript: [https://stackoverflow.com/a/668327/1417536](https://stackoverflow.com/a/668327/1417536).
+- This library uses [Token Bucket Algorithm](https://en.wikipedia.org/wiki/Token_bucket). 
 
 ## Install
 
