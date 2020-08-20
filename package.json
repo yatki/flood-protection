@@ -61,12 +61,6 @@
       }
     }
   },
-  "pre-push": {
-    "silent": false,
-    "run": [
-      "eslint:check"
-    ]
-  },
   "ava": {
     "files": [
       "test/**/*.spec.js"
